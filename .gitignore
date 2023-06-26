@@ -107,3 +107,5 @@ Temporary Items
 # Projects obj and bin folders
 **/obj/**
 **/bin/**
+
+**/.idea/**
