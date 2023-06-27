@@ -8,25 +8,17 @@ public class ArrayMaze : IMaze
     public int MazeSizeY { get; }
     public int BlockSize { get; }
 
-    private long[] _storage;
+    public long[] Storage { get; }
 
     // sizeof gives bytes, bytes * 8 = bits 
     private const int BitsInLong = sizeof(long) * 8;
 
-    public ArrayMaze(int mazeSizeX, int mazeSizeY, int blockSize)
+    public ArrayMaze(int mazeSizeX, int mazeSizeY, int blockSize, long[] storage)
     {
         MazeSizeX = mazeSizeX;
         MazeSizeY = mazeSizeY;
         BlockSize = blockSize;
-
-        var bitsNeeded = mazeSizeX * mazeSizeY;
-        var elementsNeeded = (int)Math.Ceiling((double)bitsNeeded / BitsInLong);
-
-        this._storage = new long[elementsNeeded];
-    }
-
-    public ArrayMaze() : this(100, 100, 5)
-    {
+        Storage = storage;
     }
 
     public bool IsWallBlock(int x, int y)
@@ -49,7 +41,7 @@ public class ArrayMaze : IMaze
         // Because we need bool, we just compare it to the same bit
         // If there was 1, they are the same, so true, of there was zero,
         // they are not the same and we have false
-        return (this._storage[longIndex] & (1 << bitInLongIndex)) == (1 << bitInLongIndex);
+        return (this.Storage[longIndex] & (1 << bitInLongIndex)) == (1 << bitInLongIndex);
     }
 
     public bool IsWallCell(int x, int y)
