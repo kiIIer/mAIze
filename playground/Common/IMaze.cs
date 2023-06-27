@@ -9,7 +9,7 @@ public interface IMaze
     /// Gets the size of maze on X axis. Returns number of blocks(groups of cells)
     /// </summary>
     int MazeSizeX { get; }
-    
+
     /// <summary>
     /// Gets the size of maze on Y axis. Returns number of blocks(groups of cells)
     /// </summary>
@@ -19,6 +19,14 @@ public interface IMaze
     /// Gets the block size. Returns number of cells in block side(block is a square, block size is it's side in cells)
     /// </summary>
     int BlockSize { get; }
-    
-    
+
+    /// <summary>
+    /// Gets the size of maze on X axis in cells. Returns number of cells.
+    /// </summary>
+    int MazeSizeXInCells => MazeSizeX * BlockSize;
+
+    /// <summary>
+    /// Gets the size of maze on X axis in cells. Returns number of cells.
+    /// </summary>
+    int MazeSizeYInCells => MazeSizeY * BlockSize;
 }
