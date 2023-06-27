@@ -41,7 +41,7 @@ public class ArrayMaze : IMaze
         // Because we need bool, we just compare it to the same bit
         // If there was 1, they are the same, so true, of there was zero,
         // they are not the same and we have false
-        return (this.Storage[longIndex] & (1 << bitInLongIndex)) == (1 << bitInLongIndex);
+        return (this.Storage[longIndex] & (1L << bitInLongIndex)) == (1L << bitInLongIndex);
     }
 
     public bool IsWallCell(int x, int y)
