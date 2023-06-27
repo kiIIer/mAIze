@@ -55,4 +55,30 @@ public class TestArrayMaze
         //Assert
         Assert.That(actual, Is.EqualTo(expected), nameof(arrayMaze.IsWallBlock));
     }
+
+    [Test]
+    [TestCase(8, 8, 1, new[] { 1L << 0 }, 0, 0, true)]
+    [TestCase(8, 8, 2, new[] { 1L << 1 }, 3, 0, true)]
+    [TestCase(8, 8, 3, new[] { 1L << 2 }, 7, 0, true)]
+    [TestCase(8, 8, 4, new[] { 1L << 3 }, 13, 0, true)]
+    [TestCase(8, 8, 5, new[] { 1L << (0 + 8 * 1) }, 0, 5, true)]
+    [TestCase(8, 8, 5, new[] { 1L << (1 + 8 * 1) }, 6, 8, true)]
+    [TestCase(8, 8, 5, new[] { 1L << (4 + 8 * 4) }, 21, 22, true)]
+    [TestCase(8, 8, 5, new[] { 1L }, 12, 5, false)]
+    [TestCase(8, 8, 5, new[] { 1L }, 12, 4, false)]
+    [TestCase(8, 8, 5, new[] { 1L }, 23, 3, false)]
+    [TestCase(8, 8, 5, new[] { 1L }, 14, 2, false)]
+    [TestCase(8, 16, 5, new[] { 0L, 1L }, 0, 41, true)]
+    [TestCase(16, 8, 5, new[] { 0L, 1L }, 0, 23, true)]
+    public void TestIsWallCell(int sizeX, int sizeY, int blockSize, long[] storage, int x, int y, bool expected)
+    {
+        //Arrange
+        var arrayMaze = new ArrayMaze(sizeX, sizeY, blockSize, storage);
+
+        //Act
+        bool actual = arrayMaze.IsWallCell(x, y);
+
+        //Assert
+        Assert.That(actual, Is.EqualTo(expected), nameof(arrayMaze.IsWallCell));
+    }
 }
