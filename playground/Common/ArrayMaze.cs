@@ -54,6 +54,6 @@ public class ArrayMaze : IMaze
 
     public bool IsWallCell(int x, int y)
     {
-        throw new NotImplementedException();
+        return this.IsWallBlock(x / this.BlockSize, y / this.BlockSize);
     }
 }
