@@ -1,6 +1,8 @@
+using System.Numerics;
+
 namespace Common;
 
-public class ArrayMaze : IMaze
+public class ArrayMaze<T> : IMaze where T : INumber<T>
 {
     public int MazeSizeX { get; }
     public int MazeSizeY { get; }
