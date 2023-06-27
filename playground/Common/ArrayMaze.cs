@@ -8,6 +8,8 @@ public class ArrayMaze : IMaze
     public int MazeSizeY { get; }
     public int BlockSize { get; }
 
+    private long[] storage;
+
     public ArrayMaze(int mazeSizeX, int mazeSizeY, int blockSize)
     {
         MazeSizeX = mazeSizeX;
@@ -15,7 +17,9 @@ public class ArrayMaze : IMaze
         BlockSize = blockSize;
 
         var bitsNeeded = mazeSizeX * mazeSizeY;
-        var elementsNeeded = (double)bitsNeeded / sizeof(long);
+        var elementsNeeded = (int)Math.Ceiling((double)bitsNeeded / sizeof(long));
+
+        this.storage = new long[elementsNeeded];
     }
 
     public ArrayMaze() : this(100, 100, 5)
