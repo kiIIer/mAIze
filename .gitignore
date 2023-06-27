@@ -103,3 +103,9 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Projects obj and bin folders
+**/obj/**
+**/bin/**
+
+**/.idea/**
