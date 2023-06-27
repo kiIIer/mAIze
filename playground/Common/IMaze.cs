@@ -29,4 +29,20 @@ public interface IMaze
     /// Gets the size of maze on X axis in cells. Returns number of cells.
     /// </summary>
     int MazeSizeYInCells => MazeSizeY * BlockSize;
+
+    /// <summary>
+    /// Checks if specified position (x; y) is a wall block in the maze.
+    /// <param name="x">The X coordinate of block.</param>
+    /// <param name="y">The Y coordinate of block.</param>
+    /// <returns>True if block is a wall; otherwise, false.</returns>
+    /// </summary>
+    bool IsWallBlock(int x, int y);
+
+    /// <summary>
+    /// Checks if specified position (x; y) is a wall cell in the maze.
+    /// <param name="x">The X coordinate of cell.</param>
+    /// <param name="y">The Y coordinate of cell.</param>
+    /// <returns>True if cell is a wall; otherwise, false.</returns>
+    /// </summary>
+    bool IsWallCell(int x, int y);
 }
