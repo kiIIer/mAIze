@@ -1,11 +1,9 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">/Users/killer/Library/Caches/JetBrains/Rider2023.1/resharper-host/temp/Rider/vAny/CoverageData/_playground.-209323242/Snapshot/snapshot.utdcvr</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=204c837a_002Daeab_002D4a6a_002D86a3_002Da1057764fcdb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestConstructor" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::B2F36617-BB19-4914-8EFC-6D49602530E5::net7.0::TestCommon.TestArrayMaze&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::B2F36617-BB19-4914-8EFC-6D49602530E5::net7.0::TestCommon.TestIMaze&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a17d34ac_002Df51a_002D4f47_002D87fa_002Da2345eff3f97/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestIsWallBlock(8,8,[4294967296L],0,4,True)" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::B2F36617-BB19-4914-8EFC-6D49602530E5::net7.0::TestCommon.TestArrayMaze&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+	</wpf:ResourceDictionary>
