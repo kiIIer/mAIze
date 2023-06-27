@@ -42,7 +42,8 @@ public class TestArrayMaze
     [TestCase(8, 8, new[] { 1L }, 2, 4, false)]
     [TestCase(8, 8, new[] { 1L }, 3, 3, false)]
     [TestCase(8, 8, new[] { 1L }, 4, 2, false)]
-    [TestCase(8, 8, new[] { 1L }, 5, 1, false)]
+    [TestCase(8, 16, new[] { 0L, 1L }, 0, 8, true)]
+    [TestCase(16, 8, new[] { 0L, 1L }, 0, 4, true)]
     public void TestIsWallBlock(int sizeX, int sizeY, long[] storage, int x, int y, bool expected)
     {
         //Arrange
