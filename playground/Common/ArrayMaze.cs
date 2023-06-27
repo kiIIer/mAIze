@@ -2,7 +2,7 @@ using System.Numerics;
 
 namespace Common;
 
-public class ArrayMaze<T> : IMaze where T : INumber<T>
+public class ArrayMaze : IMaze
 {
     public int MazeSizeX { get; }
     public int MazeSizeY { get; }
@@ -13,6 +13,9 @@ public class ArrayMaze<T> : IMaze where T : INumber<T>
         MazeSizeX = mazeSizeX;
         MazeSizeY = mazeSizeY;
         BlockSize = blockSize;
+
+        var bitsNeeded = mazeSizeX * mazeSizeY;
+        var elementsNeeded = (double)bitsNeeded / sizeof(long);
     }
 
     public ArrayMaze() : this(100, 100, 5)
