@@ -17,11 +17,9 @@ public class TestIMaze
         IMaze maze = new ArrayMaze(sizeX, 1, blockSize, new[] { 0L });
 
         // Act.
-
         int actual = maze.XCells;
 
         // Assert.
-
         Assert.That(actual, Is.EqualTo(expected), nameof(maze.XCells));
     }
 
@@ -38,11 +36,9 @@ public class TestIMaze
         IMaze maze = new ArrayMaze(1, sizeY, blockSize, new[] { 0L });
 
         // Act.
-
         int actual = maze.YCells;
 
         // Assert.
-
         Assert.That(actual, Is.EqualTo(expected), nameof(maze.YCells));
     }
 }
