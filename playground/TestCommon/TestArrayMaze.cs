@@ -4,7 +4,6 @@ namespace TestCommon;
 
 public class TestArrayMaze
 {
-    [Test]
     [TestCase(5, 5, 5)]
     [TestCase(1, 2, 3)]
     [TestCase(3, 2, 1)]
@@ -29,7 +28,6 @@ public class TestArrayMaze
         });
     }
 
-    [Test]
     [TestCase(8, 8, new[] { 1L << 0 }, 0, 0, true)]
     [TestCase(8, 8, new[] { 1L << 1 }, 1, 0, true)]
     [TestCase(8, 8, new[] { 1L << 2 }, 2, 0, true)]
@@ -55,7 +53,6 @@ public class TestArrayMaze
         Assert.That(actual, Is.EqualTo(expected), nameof(arrayMaze.IsWallBlock));
     }
 
-    [Test]
     [TestCase(8, 8, 1, new[] { 1L << 0 }, 0, 0, true)]
     [TestCase(8, 8, 2, new[] { 1L << 1 }, 3, 0, true)]
     [TestCase(8, 8, 3, new[] { 1L << 2 }, 7, 0, true)]

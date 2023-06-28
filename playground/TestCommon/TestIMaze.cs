@@ -4,7 +4,6 @@ namespace TestCommon;
 
 public class TestIMaze
 {
-    [Test]
     [TestCase(5, 5, 25)]
     [TestCase(4, 5, 20)]
     [TestCase(3, 5, 15)]
@@ -23,7 +22,6 @@ public class TestIMaze
         Assert.That(actual, Is.EqualTo(expected), nameof(maze.XCells));
     }
 
-    [Test]
     [TestCase(5, 5, 25)]
     [TestCase(4, 5, 20)]
     [TestCase(3, 5, 15)]
