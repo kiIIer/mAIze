@@ -13,14 +13,14 @@ public class TestIMaze
     [TestCase(2, 2, 4)]
     public void TestMazeSizeXInCells(int sizeX, int blockSize, int expected)
     {
-        // Arrange
+        // Arrange.
         IMaze maze = new ArrayMaze(sizeX, 1, blockSize, new[] { 0L });
 
-        // Act
+        // Act.
 
         int actual = maze.MazeSizeXInCells;
 
-        // Assert
+        // Assert.
 
         Assert.That(actual, Is.EqualTo(expected), nameof(maze.MazeSizeXInCells));
     }
@@ -34,14 +34,14 @@ public class TestIMaze
     [TestCase(2, 2, 4)]
     public void TestMazeSizeYInCells(int sizeY, int blockSize, int expected)
     {
-        // Arrange
+        // Arrange.
         IMaze maze = new ArrayMaze(1, sizeY, blockSize, new[] { 0L });
 
-        // Act
+        // Act.
 
         int actual = maze.MazeSizeYInCells;
 
-        // Assert
+        // Assert.
 
         Assert.That(actual, Is.EqualTo(expected), nameof(maze.MazeSizeYInCells));
     }

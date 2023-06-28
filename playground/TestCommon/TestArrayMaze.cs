@@ -12,17 +12,16 @@ public class TestArrayMaze
     [TestCase(12, 23, 44)]
     public void TestConstructor(int sizeX, int sizeY, int blockSize)
     {
-        //Arrange    
+        // Arrange.
         var random = new Random(sizeX + sizeY + blockSize);
         var storage = new[] { random.NextInt64() };
 
-        //Act
+        // Act.
         var maze = new ArrayMaze(sizeX, sizeY, blockSize, storage);
 
-        //Assert
+        // Assert.
         Assert.Multiple(() =>
         {
-            //Assert
             Assert.That(maze.MazeSizeX, Is.EqualTo(sizeX), nameof(maze.MazeSizeX));
             Assert.That(maze.MazeSizeY, Is.EqualTo(sizeY), nameof(maze.MazeSizeY));
             Assert.That(maze.BlockSize, Is.EqualTo(blockSize), nameof(maze.BlockSize));
@@ -46,13 +45,13 @@ public class TestArrayMaze
     [TestCase(16, 8, new[] { 0L, 1L }, 0, 4, true)]
     public void TestIsWallBlock(int sizeX, int sizeY, long[] storage, int x, int y, bool expected)
     {
-        //Arrange
+        // Arrange.
         var arrayMaze = new ArrayMaze(sizeX, sizeY, 1, storage);
 
-        //Act
+        // Act.
         bool actual = arrayMaze.IsWallBlock(x, y);
 
-        //Assert
+        // Assert.
         Assert.That(actual, Is.EqualTo(expected), nameof(arrayMaze.IsWallBlock));
     }
 
@@ -72,13 +71,13 @@ public class TestArrayMaze
     [TestCase(16, 8, 5, new[] { 0L, 1L }, 0, 23, true)]
     public void TestIsWallCell(int sizeX, int sizeY, int blockSize, long[] storage, int x, int y, bool expected)
     {
-        //Arrange
+        // Arrange.
         var arrayMaze = new ArrayMaze(sizeX, sizeY, blockSize, storage);
 
-        //Act
+        // Act.
         bool actual = arrayMaze.IsWallCell(x, y);
 
-        //Assert
+        // Assert.
         Assert.That(actual, Is.EqualTo(expected), nameof(arrayMaze.IsWallCell));
     }
 }
