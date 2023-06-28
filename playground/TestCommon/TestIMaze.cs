@@ -18,11 +18,11 @@ public class TestIMaze
 
         // Act.
 
-        int actual = maze.MazeSizeXInCells;
+        int actual = maze.XCells;
 
         // Assert.
 
-        Assert.That(actual, Is.EqualTo(expected), nameof(maze.MazeSizeXInCells));
+        Assert.That(actual, Is.EqualTo(expected), nameof(maze.XCells));
     }
 
     [Test]
@@ -39,10 +39,10 @@ public class TestIMaze
 
         // Act.
 
-        int actual = maze.MazeSizeYInCells;
+        int actual = maze.YCells;
 
         // Assert.
 
-        Assert.That(actual, Is.EqualTo(expected), nameof(maze.MazeSizeYInCells));
+        Assert.That(actual, Is.EqualTo(expected), nameof(maze.YCells));
     }
 }

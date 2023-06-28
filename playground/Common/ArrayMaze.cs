@@ -4,8 +4,8 @@ namespace Common;
 
 public class ArrayMaze : IMaze
 {
-    public int MazeSizeX { get; }
-    public int MazeSizeY { get; }
+    public int XBlocks { get; }
+    public int YBlocks { get; }
     public int BlockSize { get; }
 
     public long[] Storage { get; }
@@ -15,8 +15,8 @@ public class ArrayMaze : IMaze
 
     public ArrayMaze(int mazeSizeX, int mazeSizeY, int blockSize, long[] storage)
     {
-        MazeSizeX = mazeSizeX;
-        MazeSizeY = mazeSizeY;
+        XBlocks = mazeSizeX;
+        YBlocks = mazeSizeY;
         BlockSize = blockSize;
         Storage = storage;
     }
@@ -27,9 +27,9 @@ public class ArrayMaze : IMaze
 
         // First we need to know which bit we need.
         // Because we have coordinates pointing to a specific bit,
-        // We skip y number of rows, there are this.MazeSizeX bits in a row.
+        // We skip y number of rows, there are this.XBlocks bits in a row.
         // Now we are at the start of proper row, so we just skip X bits, to get to ours.
-        int bitIndex = y * this.MazeSizeX + x;
+        int bitIndex = y * this.XBlocks + x;
 
         // This floor division will give us index of long in which we have our bit
         int longIndex = bitIndex / BitsInLong;

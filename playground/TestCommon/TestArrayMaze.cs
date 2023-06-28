@@ -22,8 +22,8 @@ public class TestArrayMaze
         // Assert.
         Assert.Multiple(() =>
         {
-            Assert.That(maze.MazeSizeX, Is.EqualTo(sizeX), nameof(maze.MazeSizeX));
-            Assert.That(maze.MazeSizeY, Is.EqualTo(sizeY), nameof(maze.MazeSizeY));
+            Assert.That(maze.XBlocks, Is.EqualTo(sizeX), nameof(maze.XBlocks));
+            Assert.That(maze.YBlocks, Is.EqualTo(sizeY), nameof(maze.YBlocks));
             Assert.That(maze.BlockSize, Is.EqualTo(blockSize), nameof(maze.BlockSize));
             Assert.That(maze.Storage, Is.EqualTo(storage), nameof(maze.Storage));
         });
